@@ -3,30 +3,34 @@ import 'package:flutter_application_3/aps/constans.dart';
 
 
 
-class MyTextField extends StatelessWidget {
-  MyTextField(
+class MyTextFieldWidet extends StatelessWidget {
+  
+  MyTextFieldWidet(
       {super.key,
       required this.labelText,
       required this.obscureText,
       required this.hintText,
       this.keyboardType,
-      this.onChanged});
+      this.controller});
   final TextInputType? keyboardType;
   final String labelText;
   final bool obscureText;
   final String hintText;
-  final Function(String)? onChanged;
+  final TextEditingController? controller;
+  
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25),
       child: TextField(
-        onChanged: onChanged,
+     
+   
         textAlign: TextAlign.center,
         obscureText: obscureText,
         keyboardType: keyboardType,
         cursorColor: cWhiteColor,
+        controller: controller,
         decoration: InputDecoration(
           focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(color: Colors.grey),

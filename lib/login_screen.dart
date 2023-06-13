@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/appbar_helper/app_bar_container.dart';
 import 'package:flutter_application_3/aps/constans.dart';
@@ -35,10 +34,7 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(
               height: 100,
             ),
-            MyTextField(
-              onChanged: (value) {
-                value = username;
-              },
+            MyTextFieldWidet(
               keyboardType: TextInputType.emailAddress,
               labelText: 'username',
               obscureText: false,
@@ -46,26 +42,23 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             //password
             cSizedBox50,
-            MyTextField(
-              onChanged: (value) {
-                value = password;
-              },
+            MyTextFieldWidet(
               keyboardType: TextInputType.visiblePassword,
               labelText: 'password',
-              obscureText: true,
+              obscureText: false,
               hintText: 'enter your password',
             ),
             // Login button
-             Expanded(child: cSizedBox50),
+            Expanded(child: cSizedBox50),
             RegisterButton(
-                title: 'Login', color: Colors.grey[900], onTap: () {}),
+                title: 'Login', color: Colors.grey[900], onTap: (){},),
             cSizedBox20,
             // Text Don't have an account
             BottomTitle(
               title: 'Don\'t have an account',
               titleButton: 'Register',
               onPressed: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => RegisterScreen())),
+                  MaterialPageRoute(builder: (context) => RegisterScreen(),),),
             ),
           ],
         ),
