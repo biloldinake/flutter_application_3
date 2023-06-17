@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/introduction_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_3/flashchat.dart';
 import 'firebase_options.dart';
+import 'introduction_screen.dart';
+import 'login_screen.dart';
+import 'register_screen.dart';
 
 void main() async {
 // ...
@@ -18,8 +21,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute:IntroductionScreen.route,
+      routes:{
+    RegisterScreen.route:(context)=> RegisterScreen(),
+     LoginScreen.route:(context)=>  LoginScreen(),
+      HomeScreen.route:(context)=>  const HomeScreen(),
+       IntroductionScreen.route:(context)=> const IntroductionScreen(),
+      },
       debugShowCheckedModeBanner: false,
-      home: const IntroductionScreen(),
+      // home: const IntroductionScreen(),
     );
   }
 }

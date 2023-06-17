@@ -11,6 +11,7 @@ import 'package:flutter_application_3/textfield_helper/textfield_helper.dart';
 
 class RegisterScreen extends StatefulWidget {
   RegisterScreen({Key? key}) : super(key: key);
+  static const String route='RegisterScreen';
 
   @override
   _RegisterScreen createState() => _RegisterScreen();

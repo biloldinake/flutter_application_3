@@ -10,6 +10,7 @@ class IntroductionScreen extends StatefulWidget {
 
   @override
   State<IntroductionScreen> createState() => _IntroductionScreenState();
+  static const String route ='IntroductionScreen';
 }
 
 class _IntroductionScreenState extends State<IntroductionScreen> {
@@ -41,8 +42,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
             ),
             Center(
               child: RegisterButton(
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginScreen())),
+                onTap: () => Navigator.pushNamed(context, LoginScreen.route),
                 color: cLoginColor,
                 title: 'Login',
               ),
@@ -54,8 +54,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
             ),
             Center( 
               child: RegisterButton(
-                onTap: () => Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => RegisterScreen())),
+                onTap: () => Navigator.pushNamed(context,RegisterScreen.route ),
                 color: cRegisterColor,
                 title: 'Register',
               ),

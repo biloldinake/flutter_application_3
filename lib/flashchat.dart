@@ -8,6 +8,8 @@ class HomeScreen extends StatefulWidget {
 
   @override
 HomeScreenState createState() => HomeScreenState();
+
+  static const String route='HomeScreen';
 }
 
 class HomeScreenState extends State<HomeScreen> {

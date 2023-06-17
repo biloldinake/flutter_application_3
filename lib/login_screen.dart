@@ -9,6 +9,7 @@ import 'package:flutter_application_3/textfield_helper/textfield_helper.dart';
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
 
+  static const String route='LoginScree';
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
